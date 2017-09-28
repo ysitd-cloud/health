@@ -21,7 +21,7 @@ export default {
       statusCode: null,
       timeout: null,
       uptime: null,
-      response: null
+      response: null,
     };
   },
   filters: {
