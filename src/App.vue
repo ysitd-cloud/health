@@ -5,7 +5,7 @@
     </v-toolbar>
     <main>
       <v-container fluid>
-        <router-view></router-view>
+        <traffic></traffic>
       </v-container>
     </main>
     <v-footer fixed>
@@ -14,5 +14,14 @@
   </v-app>
 </template>
 
-
 <style src="./assets/main.styl" lang="stylus"></style>
+
+<script>
+  import Traffic from './components/traffic/Component.vue';
+
+  export default {
+    components: {
+      Traffic,
+    },
+  };
+</script>
