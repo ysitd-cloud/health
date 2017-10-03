@@ -19,9 +19,9 @@ export default {
     return {
       fetching: true,
       statusCode: null,
-      timeout: null,
       uptime: null,
       response: null,
+      initial: false,
     };
   },
   filters: {
@@ -52,25 +52,18 @@ export default {
   },
   methods: {
     fetchData() {
-      axios.get(HEALTH_URL)
+      this.fetching = true;
+      return axios.get(HEALTH_URL)
         .then(({ data }) => {
           this.statusCode = data.total_status_code_count;
           this.uptime = data.uptime_sec;
           this.response = data.average_response_time_sec;
           this.fetching = false;
         });
-      this.timeout = setTimeout(() => this.fetchData(), 5000);
-    },
-    cleanUp() {
-      if (this.timeout !== null) {
-        clearTimeout(this.timeout);
-      }
     },
   },
   mounted() {
-    this.fetchData();
-  },
-  beforeDestroy() {
-    this.cleanUp();
+    this.fetchData()
+      .then(() => { this.initial = true; });
   },
 };

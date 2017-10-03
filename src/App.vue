@@ -4,8 +4,12 @@
       <v-toolbar-title>YSITD Cloud Health</v-toolbar-title>
     </v-toolbar>
     <main>
-      <v-container fluid>
-        <traffic></traffic>
+      <v-container fluid grid-list-md>
+        <v-layout row wrap>
+          <v-flex xs12 md4>
+            <traffic />
+          </v-flex>
+        </v-layout>
       </v-container>
     </main>
     <v-footer fixed>
