@@ -1,6 +1,4 @@
-# ysitd-cloud-health
-
-> YSITD Cloud Health Panel
+# YSITD Cloud Health Panel
 
 ## Build Setup
 
