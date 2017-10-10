@@ -30,15 +30,17 @@
         <v-flex xs12>Average Response Time: <v-chip>{{ response | ms }} ms</v-chip></v-flex>
       </v-layout>
       <v-layout row v-if="statusCode !== null">
-        <pie-chart
-          title="Status Code"
-          title-position="top"
-          :datasets="datasets"
-          :labels="labels"
-          :colors="colors"
-          height="40vh"
-          width="20vw"
-        ></pie-chart>
+        <v-flex xs12>
+          <pie-chart
+            title="Status Code"
+            title-position="top"
+            :datasets="datasets"
+            :labels="labels"
+            :colors="colors"
+            height="auto"
+            width="100%"
+          ></pie-chart>
+        </v-flex>
       </v-layout>
     </v-card-text>
   </v-card>
