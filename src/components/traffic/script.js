@@ -61,6 +61,13 @@ export default {
           this.fetching = false;
         });
     },
+    refreshData() {
+      window.gtag('event', 'refresh', {
+        event_label: 'network',
+        event_category: 'refresh',
+      });
+      this.fetchData();
+    },
   },
   mounted() {
     this.fetchData()

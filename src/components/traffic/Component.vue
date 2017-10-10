@@ -14,7 +14,7 @@
         class="primary"
         :disabled="fetching"
         :loading="fetching"
-        @click="fetchData"
+        @click="refreshData"
       >
         <v-icon>refresh</v-icon>
       </v-btn>
