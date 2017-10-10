@@ -1,18 +1,20 @@
 <template>
   <v-app light>
-    <v-toolbar fixed dark class="primary">
+    <v-toolbar fixed dark class="primary" app>
       <v-toolbar-title>YSITD Cloud Health</v-toolbar-title>
     </v-toolbar>
     <main>
-      <v-container fluid grid-list-md>
-        <v-layout row wrap>
-          <v-flex xs12 md4>
-            <traffic />
-          </v-flex>
-        </v-layout>
-      </v-container>
+      <v-content>
+        <v-container fluid grid-list-md>
+          <v-layout row wrap>
+            <v-flex xs12 md4>
+              <traffic />
+            </v-flex>
+          </v-layout>
+        </v-container>
+      </v-content>
     </main>
-    <v-footer fixed>
+    <v-footer fixed app>
       <span>&copy; 2017 YSITD Cloud</span>
     </v-footer>
   </v-app>
