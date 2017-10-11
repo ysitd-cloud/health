@@ -1,6 +1,6 @@
 import axios from 'axios';
 import moment from 'moment';
-import PieChart from '../charts/PieCharts.vue';
+import PieChart from '../../charts/PieCharts.vue';
 
 const HEALTH_URL = 'https://status.ysitd.cloud/traffic/health';
 
@@ -63,7 +63,7 @@ export default {
     },
     refreshData() {
       window.gtag('event', 'refresh', {
-        event_label: 'network',
+        event_label: 'proxy',
         event_category: 'refresh',
       });
       this.fetchData();

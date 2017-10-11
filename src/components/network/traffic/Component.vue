@@ -1,7 +1,7 @@
 <template>
   <v-card>
     <v-card-title>
-      <h3 class="headline">Network Traffic</h3>
+      <h3 class="headline">Proxy</h3>
     </v-card-title>
 
     <v-card-text class="pt-0">
@@ -49,6 +49,7 @@
 <style scoped lang="stylus">
   .btn.btn--absolute.btn--floating.btn--top
     top 16px
+    z-index 1
 </style>
 
 <script src="./script.js"></script>
