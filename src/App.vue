@@ -8,9 +8,7 @@
         <v-container fluid grid-list-md>
           <v-layout row>
             <v-flex xs12>
-              <error-boundary>
-                <section-header>Network</section-header>
-              </error-boundary>
+              <section-header>Network</section-header>
             </v-flex>
           </v-layout>
           <v-layout row wrap>
@@ -20,12 +18,21 @@
               </error-boundary>
             </v-flex>
             <v-flex xs12 md8>
-              <cdn />
+              <error-boundary>
+                <cdn />
+              </error-boundary>
             </v-flex>
           </v-layout>
           <v-layout row>
             <v-flex xs12>
               <section-header>Components</section-header>
+            </v-flex>
+          </v-layout>
+          <v-layout row wrap>
+            <v-flex xs12>
+              <error-boundary>
+                <components-card />
+              </error-boundary>
             </v-flex>
           </v-layout>
         </v-container>
@@ -44,6 +51,7 @@
   import Traffic from './components/network/traffic/Component.vue';
   import Cdn from './components/network/cdn/Component.vue';
   import ErrorBoundary from './components/ErrorBoundary';
+  import ComponentsCard from './components/components/Card.vue';
 
   export default {
     components: {
@@ -51,6 +59,7 @@
       SectionHeader,
       Cdn,
       ErrorBoundary,
+      ComponentsCard,
     },
   };
 </script>
