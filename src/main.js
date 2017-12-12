@@ -5,7 +5,11 @@ import App from './App.vue';
 /* globals window */
 window.gtag('config', 'UA-103662489-2');
 
-Vue.use(Vuetify);
+Vue.use(Vuetify, {
+  theme: {
+    primary: '#44A148',
+  },
+});
 
 Vue.config.productionTip = false;
 

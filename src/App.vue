@@ -3,48 +3,46 @@
     <v-toolbar fixed dark class="primary" app>
       <v-toolbar-title>YSITD Cloud Health</v-toolbar-title>
     </v-toolbar>
-    <main>
-      <v-content>
-        <v-container fluid grid-list-md>
-          <v-layout row>
-            <v-flex xs12>
-              <section-header>Network</section-header>
-            </v-flex>
-          </v-layout>
-          <v-layout row wrap>
-            <v-flex xs12 md4>
-              <error-boundary>
-                <traffic />
-              </error-boundary>
-            </v-flex>
-            <v-flex xs12 md8>
-              <error-boundary>
-                <cdn />
-              </error-boundary>
-            </v-flex>
-          </v-layout>
-          <v-layout row>
-            <v-flex xs12>
-              <section-header>Components</section-header>
-            </v-flex>
-          </v-layout>
-          <v-layout row wrap>
-            <v-flex xs12>
-              <error-boundary>
-                <components-card />
-              </error-boundary>
-            </v-flex>
-          </v-layout>
-        </v-container>
-      </v-content>
-    </main>
+    <v-content>
+      <v-container fluid grid-list-md>
+        <v-layout row>
+          <v-flex xs12>
+            <section-header>Network</section-header>
+          </v-flex>
+        </v-layout>
+        <v-layout row wrap>
+          <v-flex xs12 md4>
+            <error-boundary>
+              <traffic />
+            </error-boundary>
+          </v-flex>
+          <v-flex xs12 md8>
+            <error-boundary>
+              <cdn />
+            </error-boundary>
+          </v-flex>
+        </v-layout>
+        <v-layout row>
+          <v-flex xs12>
+            <section-header>Components</section-header>
+          </v-flex>
+        </v-layout>
+        <v-layout row wrap>
+          <v-flex xs12>
+            <error-boundary>
+              <components-card />
+            </error-boundary>
+          </v-flex>
+        </v-layout>
+      </v-container>
+    </v-content>
     <v-footer fixed app>
       <span>&copy; 2017 YSITD Cloud</span>
     </v-footer>
   </v-app>
 </template>
 
-<style src="./assets/main.styl" lang="stylus"></style>
+<style src="../node_modules/vuetify/dist/vuetify.min.css"></style>
 
 <script>
   import SectionHeader from './components/SectionHeader.vue';

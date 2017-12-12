@@ -9,6 +9,7 @@ export default {
       services: {
         account: 'Account Service',
         status: 'Status Service',
+        controller: 'App Controller Service',
       },
     };
   },
